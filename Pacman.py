@@ -2,7 +2,8 @@ import pygame
 import random
 
 pygame.init()
-
+playerX_change = 0
+playerY_change = 0
 screen = pygame.display.set_mode((1450, 835))
 pygame.display.set_caption("Pacman")
 icon = pygame.image.load('smiley (1).png')
@@ -84,8 +85,36 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-        if event.type == pygame.KEYDOWN:
-            print("Key Pressed")
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_LEFT]:
+            playerX_change = -0.1
+            playerY_change = 0.0
+        if keys[pygame.K_RIGHT]:
+            playerX_change = 0.1
+            playerY_change = 0.0
+        if keys[pygame.K_UP]:
+            playerY_change = -0.1
+            playerX_change = 0.0
+        if keys[pygame.K_DOWN]:
+            playerY_change = 0.1
+            playerX_change = 0.0
+        if keys[pygame.K_SPACE]:
+            playerX_change = 0.0
+            playerY_change = 0.0
+        # if event.type == pygame.KEYDOWN:
+        #     playerY_change = -0.1
+        #     if event.key == pygame.K_LEFT:
+        #         playerX_change = -0.1
+        #     if event.key == pygame.K_RIGHT:
+        #         playerY_change = 0.1
+        #
+        # if event.type == pygame.KEYUP:
+        #     if event.key == pygame.K_LEFT:
+        #         playerX_change = -0.1
+        #     if event.key == pygame.K_RIGHT:
+        #         playerX_change = 0.1
+    playerY += playerY_change
+    playerX += playerX_change
     blinky()
     inky()
     pinky()
