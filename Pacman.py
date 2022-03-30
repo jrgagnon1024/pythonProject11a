@@ -20,34 +20,35 @@ clydeImg = pygame.image.load('2469743-orange.png')
 
 # selection_random = random.randint(1, 24)
 # print(selection_random)
-selection_random = 2
-if selection_random == 1:
-    blinkyX = locations[1][0]
-    blinkyY = locations[1][1]
-    inkyX = locations[3][0]
-    inkyY = locations[3][1]
-    pinkyX = locations[2][0]
-    pinkyY = locations[2][1]
-    clydeX = locations[0][0]
-    clydeY = locations[0][1]
-elif selection_random == 2:
-    blinkyX = locations[2][0]
-    blinkyY = locations[2][1]
-    inkyX = locations[1][0]
-    inkyY = locations[1][1]
-    pinkyX = locations[3][0]
-    pinkyY = locations[3][1]
-    clydeX = locations[0][0]
-    clydeY = locations[0][1]
+# selection_random = 2
+# if selection_random == 1:
+#     blinkyX = locations[1][0]
+#     blinkyY = locations[1][1]
+#     inkyX = locations[3][0]
+#     inkyY = locations[3][1]
+#     pinkyX = locations[2][0]
+#     pinkyY = locations[2][1]
+#     clydeX = locations[0][0]
+#     clydeY = locations[0][1]
+# elif selection_random == 2:
+#     blinkyX = locations[2][0]
+#     blinkyY = locations[2][1]
+#     inkyX = locations[1][0]
+#     inkyY = locations[1][1]
+#     pinkyX = locations[3][0]
+#     pinkyY = locations[3][1]
+#     clydeX = locations[0][0]
+#     clydeY = locations[0][1]
+blinkyX = 750
+blinkyY = 325
+inkyX = 750
+inkyY = 375
 
-# inkyX = 750
-# inkyY = 375
+pinkyX = 725
+pinkyY = 375
 
-# pinkyX = 725
-# pinkyY = 375
-
-# clydeX = 775
-# clydeY = 375
+clydeX = 775
+clydeY = 375
 
 running = True
 
