@@ -84,6 +84,8 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+        if event.type == pygame.KEYDOWN:
+            print("Key Pressed")
     blinky()
     inky()
     pinky()
