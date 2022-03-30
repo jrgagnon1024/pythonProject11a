@@ -1,5 +1,7 @@
 import pygame
 import random
+import math
+
 
 pygame.init()
 playerX_change = 0
@@ -9,6 +11,8 @@ pygame.display.set_caption("Pacman")
 icon = pygame.image.load('smiley (1).png')
 pygame.display.set_icon(icon)
 
+
+life = pygame.image.load('')
 locations = ((750, 325), (750, 375), (725, 375), (775, 375))
 # Player
 playerImg = pygame.image.load('Pacman.png')
@@ -80,6 +84,12 @@ def clyde():
     screen.blit(newClydeImg, (clydeX, clydeY))
 
 
+def collision_detection(ghostx, ghosty, playerx, playery):
+
+    distance = math.sqrt(((ghostx - playerx) ** 2) + ((ghosty - playery) ** 2))
+    if distance < 1:
+        print("hello")
+
 while running:
     screen.fill((0, 0, 0))
     for event in pygame.event.get():
@@ -101,6 +111,7 @@ while running:
         if keys[pygame.K_SPACE]:
             playerX_change = 0.0
             playerY_change = 0.0
+
         # if event.type == pygame.KEYDOWN:
         #     playerY_change = -0.1
         #     if event.key == pygame.K_LEFT:
