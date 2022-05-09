@@ -10,7 +10,7 @@ pygame.display.set_caption("Pacman")
 icon = pygame.image.load('smiley (1).png')
 pygame.display.set_icon(icon)
 
-life = pygame.image.load('heart.jpg')
+life = pygame.image.load('heart.png')
 locations = ((750, 325), (750, 375), (725, 375), (775, 375))
 # Player
 playerImg = pygame.image.load('Pacman.png')
