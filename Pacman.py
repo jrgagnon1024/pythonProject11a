@@ -30,12 +30,10 @@ wallImg = pygame.image.load('Wall.png')
 tile = 32  # side length in pixels of a square tile
 lives = []
 number_of_lives = 3
-for life in range(number_of_lives):
-    lives.append(pygame.image.load('heart.png'))
 
 score = 0
 
-# selection_random = random.randint(1, 24)
+selection_random = random.randint(1, 24)
 # print(selection_random)
 
 # blinkyX = locations[1][0]
@@ -59,7 +57,19 @@ pinkyY = 375
 
 clydeX = 775
 clydeY = 375
-selection_random = 3
+
+livesX = 20
+livesY = 1410
+
+
+# def lives(heart):
+#     newLivesImage = pygame.transform.scale(lives[heart], (32, 32))
+#     screen.blit(newLivesImage, (livesX, livesY))
+#
+#
+# for life in range(number_of_lives):
+#     lives.append(pygame.image.load('heart.png'))
+#     lives(life)
 
 
 def randomize(sel_random):
@@ -103,10 +113,10 @@ def randomize(sel_random):
         clydeX = locations[0][0]
         clydeY = locations[0][1]
     elif sel_random == 5:
-        blinkyX = locations[3][0]
-        blinkyY = locations[3][1]
-        inkyX = locations[1][0]
-        inkyY = locations[1][1]
+        blinkyX = locations[1][0]
+        blinkyY = locations[1][1]
+        inkyX = locations[2][0]
+        inkyY = locations[2][1]
         pinkyX = locations[3][0]
         pinkyY = locations[3][1]
         clydeX = locations[0][0]
@@ -123,165 +133,165 @@ def randomize(sel_random):
     elif sel_random == 7:
         blinkyX = locations[2][0]
         blinkyY = locations[2][1]
-        inkyX = locations[1][0]
-        inkyY = locations[1][1]
-        pinkyX = locations[3][0]
-        pinkyY = locations[3][1]
-        clydeX = locations[0][0]
-        clydeY = locations[0][1]
+        inkyX = locations[3][0]
+        inkyY = locations[3][1]
+        pinkyX = locations[0][0]
+        pinkyY = locations[0][1]
+        clydeX = locations[1][0]
+        clydeY = locations[1][1]
     elif sel_random == 8:
-        blinkyX = locations[2][0]
-        blinkyY = locations[2][1]
-        inkyX = locations[1][0]
-        inkyY = locations[1][1]
-        pinkyX = locations[3][0]
-        pinkyY = locations[3][1]
-        clydeX = locations[0][0]
-        clydeY = locations[0][1]
+        blinkyX = locations[3][0]
+        blinkyY = locations[3][1]
+        inkyX = locations[2][0]
+        inkyY = locations[2][1]
+        pinkyX = locations[0][0]
+        pinkyY = locations[0][1]
+        clydeX = locations[1][0]
+        clydeY = locations[1][1]
     elif sel_random == 9:
-        blinkyX = locations[2][0]
-        blinkyY = locations[2][1]
-        inkyX = locations[1][0]
-        inkyY = locations[1][1]
-        pinkyX = locations[3][0]
-        pinkyY = locations[3][1]
-        clydeX = locations[0][0]
-        clydeY = locations[0][1]
+        blinkyX = locations[0][0]
+        blinkyY = locations[0][1]
+        inkyX = locations[3][0]
+        inkyY = locations[3][1]
+        pinkyX = locations[2][0]
+        pinkyY = locations[2][1]
+        clydeX = locations[1][0]
+        clydeY = locations[1][1]
     elif sel_random == 10:
-        blinkyX = locations[2][0]
-        blinkyY = locations[2][1]
-        inkyX = locations[1][0]
-        inkyY = locations[1][1]
-        pinkyX = locations[3][0]
-        pinkyY = locations[3][1]
-        clydeX = locations[0][0]
-        clydeY = locations[0][1]
+        blinkyX = locations[3][0]
+        blinkyY = locations[3][1]
+        inkyX = locations[0][0]
+        inkyY = locations[0][1]
+        pinkyX = locations[2][0]
+        pinkyY = locations[2][1]
+        clydeX = locations[1][0]
+        clydeY = locations[1][1]
     elif sel_random == 11:
-        blinkyX = locations[2][0]
-        blinkyY = locations[2][1]
-        inkyX = locations[1][0]
-        inkyY = locations[1][1]
+        blinkyX = locations[0][0]
+        blinkyY = locations[0][1]
+        inkyX = locations[2][0]
+        inkyY = locations[2][1]
         pinkyX = locations[3][0]
         pinkyY = locations[3][1]
-        clydeX = locations[0][0]
-        clydeY = locations[0][1]
+        clydeX = locations[1][0]
+        clydeY = locations[1][1]
     elif sel_random == 12:
         blinkyX = locations[2][0]
         blinkyY = locations[2][1]
-        inkyX = locations[1][0]
-        inkyY = locations[1][1]
+        inkyX = locations[0][0]
+        inkyY = locations[0][1]
         pinkyX = locations[3][0]
         pinkyY = locations[3][1]
-        clydeX = locations[0][0]
-        clydeY = locations[0][1]
+        clydeX = locations[1][0]
+        clydeY = locations[1][1]
     elif sel_random == 13:
-        blinkyX = locations[2][0]
-        blinkyY = locations[2][1]
-        inkyX = locations[1][0]
-        inkyY = locations[1][1]
-        pinkyX = locations[3][0]
-        pinkyY = locations[3][1]
-        clydeX = locations[0][0]
-        clydeY = locations[0][1]
+        blinkyX = locations[1][0]
+        blinkyY = locations[1][1]
+        inkyX = locations[3][0]
+        inkyY = locations[3][1]
+        pinkyX = locations[0][0]
+        pinkyY = locations[0][1]
+        clydeX = locations[2][0]
+        clydeY = locations[2][1]
     elif sel_random == 14:
-        blinkyX = locations[2][0]
-        blinkyY = locations[2][1]
+        blinkyX = locations[3][0]
+        blinkyY = locations[3][1]
         inkyX = locations[1][0]
         inkyY = locations[1][1]
-        pinkyX = locations[3][0]
-        pinkyY = locations[3][1]
-        clydeX = locations[0][0]
-        clydeY = locations[0][1]
+        pinkyX = locations[0][0]
+        pinkyY = locations[0][1]
+        clydeX = locations[2][0]
+        clydeY = locations[2][1]
     elif sel_random == 15:
-        blinkyX = locations[2][0]
-        blinkyY = locations[2][1]
-        inkyX = locations[1][0]
-        inkyY = locations[1][1]
-        pinkyX = locations[3][0]
-        pinkyY = locations[3][1]
-        clydeX = locations[0][0]
-        clydeY = locations[0][1]
+        blinkyX = locations[0][0]
+        blinkyY = locations[0][1]
+        inkyX = locations[3][0]
+        inkyY = locations[3][1]
+        pinkyX = locations[1][0]
+        pinkyY = locations[1][1]
+        clydeX = locations[2][0]
+        clydeY = locations[2][1]
     elif sel_random == 16:
-        blinkyX = locations[2][0]
-        blinkyY = locations[2][1]
-        inkyX = locations[1][0]
-        inkyY = locations[1][1]
-        pinkyX = locations[3][0]
-        pinkyY = locations[3][1]
-        clydeX = locations[0][0]
-        clydeY = locations[0][1]
+        blinkyX = locations[3][0]
+        blinkyY = locations[3][1]
+        inkyX = locations[0][0]
+        inkyY = locations[0][1]
+        pinkyX = locations[1][0]
+        pinkyY = locations[1][1]
+        clydeX = locations[2][0]
+        clydeY = locations[2][1]
     elif sel_random == 17:
-        blinkyX = locations[2][0]
-        blinkyY = locations[2][1]
+        blinkyX = locations[0][0]
+        blinkyY = locations[0][1]
         inkyX = locations[1][0]
         inkyY = locations[1][1]
         pinkyX = locations[3][0]
         pinkyY = locations[3][1]
-        clydeX = locations[0][0]
-        clydeY = locations[0][1]
+        clydeX = locations[2][0]
+        clydeY = locations[2][1]
     elif sel_random == 18:
-        blinkyX = locations[2][0]
-        blinkyY = locations[2][1]
-        inkyX = locations[1][0]
-        inkyY = locations[1][1]
+        blinkyX = locations[1][0]
+        blinkyY = locations[1][1]
+        inkyX = locations[0][0]
+        inkyY = locations[0][1]
         pinkyX = locations[3][0]
         pinkyY = locations[3][1]
-        clydeX = locations[0][0]
-        clydeY = locations[0][1]
+        clydeX = locations[2][0]
+        clydeY = locations[2][1]
     elif sel_random == 19:
-        blinkyX = locations[2][0]
-        blinkyY = locations[2][1]
-        inkyX = locations[1][0]
-        inkyY = locations[1][1]
-        pinkyX = locations[3][0]
-        pinkyY = locations[3][1]
-        clydeX = locations[0][0]
-        clydeY = locations[0][1]
+        blinkyX = locations[1][0]
+        blinkyY = locations[1][1]
+        inkyX = locations[2][0]
+        inkyY = locations[2][1]
+        pinkyX = locations[0][0]
+        pinkyY = locations[0][1]
+        clydeX = locations[3][0]
+        clydeY = locations[3][1]
     elif sel_random == 20:
         blinkyX = locations[2][0]
         blinkyY = locations[2][1]
         inkyX = locations[1][0]
         inkyY = locations[1][1]
-        pinkyX = locations[3][0]
-        pinkyY = locations[3][1]
-        clydeX = locations[0][0]
-        clydeY = locations[0][1]
+        pinkyX = locations[0][0]
+        pinkyY = locations[0][1]
+        clydeX = locations[3][0]
+        clydeY = locations[3][1]
     elif sel_random == 21:
-        blinkyX = locations[2][0]
-        blinkyY = locations[2][1]
-        inkyX = locations[1][0]
-        inkyY = locations[1][1]
-        pinkyX = locations[3][0]
-        pinkyY = locations[3][1]
-        clydeX = locations[0][0]
-        clydeY = locations[0][1]
+        blinkyX = locations[0][0]
+        blinkyY = locations[0][1]
+        inkyX = locations[2][0]
+        inkyY = locations[2][1]
+        pinkyX = locations[1][0]
+        pinkyY = locations[1][1]
+        clydeX = locations[3][0]
+        clydeY = locations[3][1]
     elif sel_random == 22:
         blinkyX = locations[2][0]
         blinkyY = locations[2][1]
-        inkyX = locations[1][0]
-        inkyY = locations[1][1]
-        pinkyX = locations[3][0]
-        pinkyY = locations[3][1]
-        clydeX = locations[0][0]
-        clydeY = locations[0][1]
+        inkyX = locations[0][0]
+        inkyY = locations[0][1]
+        pinkyX = locations[1][0]
+        pinkyY = locations[1][1]
+        clydeX = locations[3][0]
+        clydeY = locations[3][1]
     elif sel_random == 23:
-        blinkyX = locations[2][0]
-        blinkyY = locations[2][1]
+        blinkyX = locations[0][0]
+        blinkyY = locations[0][1]
         inkyX = locations[1][0]
         inkyY = locations[1][1]
-        pinkyX = locations[3][0]
-        pinkyY = locations[3][1]
-        clydeX = locations[0][0]
-        clydeY = locations[0][1]
+        pinkyX = locations[2][0]
+        pinkyY = locations[2][1]
+        clydeX = locations[3][0]
+        clydeY = locations[3][1]
     elif sel_random == 24:
-        blinkyX = locations[2][0]
-        blinkyY = locations[2][1]
-        inkyX = locations[1][0]
-        inkyY = locations[1][1]
-        pinkyX = locations[3][0]
-        pinkyY = locations[3][1]
-        clydeX = locations[0][0]
-        clydeY = locations[0][1]
+        blinkyX = locations[1][0]
+        blinkyY = locations[1][1]
+        inkyX = locations[0][0]
+        inkyY = locations[0][1]
+        pinkyX = locations[2][0]
+        pinkyY = locations[2][1]
+        clydeX = locations[3][0]
+        clydeY = locations[3][1]
     return blinkyX, blinkyY, inkyX, inkyY, pinkyX, pinkyY, clydeX, clydeY
 
 
@@ -376,6 +386,67 @@ class PowerPellet(pygame.sprite.Sprite):
         self.rect.y = y
 
 
+class BonusFruitCherry(pygame.sprite.Sprite):
+    def __init__(self, x, y, image):
+        self.sprite = pygame.sprite.Sprite.__init__(self)
+        self.image = image
+        self.rect = self.image.get_rect()
+        self.rect.x = x
+        self.rect.y = y
+
+
+class BonusFruitStrawberry(pygame.sprite.Sprite):
+    def __init__(self, x, y, image):
+        self.sprite = pygame.sprite.Sprite.__init__(self)
+        self.image = image
+        self.rect = self.image.get_rect()
+        self.rect.x = x
+        self.rect.y = y
+
+
+class BonusFruitOrange(pygame.sprite.Sprite):
+    def __init__(self, x, y, image):
+        self.sprite = pygame.sprite.Sprite.__init__(self)
+        self.image = image
+        self.rect = self.image.get_rect()
+        self.rect.x = x
+        self.rect.y = y
+
+
+font = pygame.font.Font('freesansbold.ttf', 32)
+
+textX = 725
+textY = 770
+
+
+def displayScore(x, y):
+    rendered_score = font.render("Score: " + str(score), True, (255, 255, 255))
+    screen.blit(rendered_score, (x, y))
+
+
+pausedX = 1450/2
+pausedY = 835/2
+
+
+def paused(x, y):
+    paused_function = True
+
+    while paused_function:
+        paused_game = font.render("Paused", True, (255, 255, 255))
+        screen.blit(paused_game, (x, y))
+        pygame.display.update()
+        for event_paused in pygame.event.get():
+            if event_paused.type == pygame.QUIT:
+                pygame.quit()
+                quit()
+
+            if event_paused.type == pygame.KEYDOWN:
+
+                if event_paused.key == pygame.K_c:
+                    paused_function = False
+                    print(paused_function)
+
+
 '''
 def player():
     newPlayerImg = pygame.transform.scale(playerImg, (32, 32))
@@ -427,24 +498,57 @@ ghosts = pygame.sprite.Group([inky, blinky, pinky, clyde])
 wall = Wall(wallX, wallY, smaller_image)
 walls = pygame.sprite.Group([wall])
 
-power_pellet = PowerPellet(500, 500, power_pellet_image)
+power_pellet = PowerPellet(507, 425, power_pellet_image)
 power_pellets = pygame.sprite.Group(power_pellet)
+power_pellet = PowerPellet(345, 460, power_pellet_image)
+power_pellets.add(power_pellet)
 
-all_sprites = pygame.sprite.Group([pacman, wall, inky, blinky, pinky, clyde, power_pellet])
+all_sprites = pygame.sprite.Group([pacman, wall, inky, blinky, pinky, clyde, power_pellets])
 
 pac_pellets = pygame.sprite.Group()
-for x in range(0, 32):
-    pelletX = random.randint(0, 1440)
-    pelletY = random.randint(0, 739)
 
-    pellet = PacPellet(pelletX, pelletY, pac_pellet_image)
 
-    if (pelletX == wallX) or (pelletY == wallY):
+def generate_power_pellets():
+    global pac_pellets
+
+    for x in range(0, 32):
         pelletX = random.randint(0, 1440)
         pelletY = random.randint(0, 739)
+
         pellet = PacPellet(pelletX, pelletY, pac_pellet_image)
-    all_sprites.add(pellet)
-    pac_pellets.add(pellet)
+
+        if (pelletX == wallX) or (pelletY == wallY):
+            pelletX = random.randint(0, 1440)
+            pelletY = random.randint(0, 739)
+            pellet = PacPellet(pelletX, pelletY, pac_pellet_image)
+        all_sprites.add(pellet)
+        pac_pellets.add(pellet)
+    pelletX = 507
+    pelletY = 450
+    for y_pellets in range(0, 14):
+        pellet = PacPellet(pelletX, pelletY, pac_pellet_image)
+        all_sprites.add(pellet)
+        pac_pellets.add(pellet)
+        pelletY += 20
+    for x_pellets in range(0, 20):
+        pellet = PacPellet(pelletX, pelletY, pac_pellet_image)
+        all_sprites.add(pellet)
+        pac_pellets.add(pellet)
+        pelletX -= 20
+    for y_pellets in range(0, 34):
+        pellet = PacPellet(pelletX, pelletY, pac_pellet_image)
+        all_sprites.add(pellet)
+        pac_pellets.add(pellet)
+        pelletY -= 20
+    for x_pellets in range(0, 21):
+        pellet = PacPellet(pelletX, pelletY, pac_pellet_image)
+        all_sprites.add(pellet)
+        pac_pellets.add(pellet)
+        pelletX += 20
+    return pelletX, pelletY, pac_pellets
+
+
+pelletsX, pelletsY, pac_pellets = generate_power_pellets()
 
 
 def hud():
@@ -1287,14 +1391,13 @@ def wall_and_cage():
         walls.add(wall_image)
         wallX = wallX - 1
 
-
     return wallX, wallY
 
 
 wallX, wallY = wall_and_cage()
 wallX, wallY = hud()
 clock = pygame.time.Clock()
-
+space_pressed = False
 while running:
     screen.fill((0, 0, 0))
     for event in pygame.event.get():
@@ -1327,17 +1430,21 @@ while running:
         if keys[pygame.K_SPACE]:
             playerX_change = 0
             playerY_change = 0
+            space_pressed = True
+            paused(pausedX, pausedY)
+
+        if keys[pygame.K_ESCAPE] and space_pressed:
+            space_pressed = False
+
         if keys[pygame.K_TAB]:
             if (playerX_change < 0) and (playerY_change == 0):
                 playerX_change -= 1
-            elif(playerX_change > 0) and (playerY_change == 0):
+            elif (playerX_change > 0) and (playerY_change == 0):
                 playerX_change += 1
-            elif(playerX_change == 0) and (playerY_change < 0):
+            elif (playerX_change == 0) and (playerY_change < 0):
                 playerY_change -= 1
-            elif(playerX_change == 0) and (playerY_change > 0):
+            elif (playerX_change == 0) and (playerY_change > 0):
                 playerY_change += 1
-
-
 
     '''
     playerY += playerY_change
@@ -1352,6 +1459,8 @@ while running:
     pacman.update(playerX_change, playerY_change)
     ghosts.update()
     all_sprites.draw(screen)
+    displayScore(textX, textY)
+
     pygame.display.flip()
     clock.tick(60)
     # pygame.display.update()
